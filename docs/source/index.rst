@@ -9,7 +9,7 @@ Welcome to the django-polls documentation!
 The **django-polls** application is a *fictional* polls application that can be dropped into any Django project.
 
 The application was built following the `tutorials <https://docs.djangoproject.com/en/4.2/intro/>`_ provided in the
-Django documentation.
+official Django documentation. The documentation for django-polls is hosted on Read the Docs.
 
 .. note::
 
