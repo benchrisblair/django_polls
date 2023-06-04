@@ -45,7 +45,7 @@
     version = {attr = "polls.__version__"}
 
 [tool.bumpver]
-    current_version = "0.1.2"
+    current_version = "0.2.0"
     version_pattern = "MAJOR.MINOR.PATCH"
     commit_message = "Version bump: {old_version} -> {new_version}"
     commit = true
