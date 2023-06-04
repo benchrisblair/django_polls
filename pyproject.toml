@@ -1,0 +1,59 @@
+[build-system]
+    requires = ["setuptools"]
+    build-backend = "setuptools.build_meta"
+
+[project]
+    name = "django_polls"
+    # version = "0.1.0"
+    authors = [
+        {name = "John Smith", email = "johnsmith@example.com"},
+    ]
+    maintainers = [
+        {name = "Jane Doe", email = "janedoe@example.com"},
+    ]
+    description = "A Django app to conduct web-based polls."
+    readme = "README.rst"
+    requires-python = ">=3.8"
+    keywords = ["django", "python"]
+    license = {file = "LICENSE"}
+    classifiers = [
+        "Framework :: Django",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: BSD License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+    ]
+    dependencies = [
+        "django",
+    ]
+    dynamic = ["version"]
+
+[project.optional-dependencies]
+    dev = [
+        "django-debug-toolbar",
+    ]
+
+#[project.urls]
+#    Homepage = "https://example.com"
+#    Documentation = "https://readthedocs.org"
+#    Repository = "https://github.com/me/django_polls.git"
+
+#[project.scripts]
+#    my-script = "my_package.module:function"
+
+[tool.setuptools.dynamic]
+    version = {attr = "polls.__version__"}
+
+[tool.bumpver]
+    current_version = "0.1.1"
+    version_pattern = "MAJOR.MINOR.PATCH"
+    commit_message = "Version bump: {old_version} -> {new_version}"
+    commit = false
+    tag = false
+    push = false
+
+[tool.bumpver.file_patterns]
+    "pyproject.toml" = ['current_version = "{version}"']
+    "README.rst" = ['Version: {version}']
+    "polls/__init__.py" = ['__version__ = "{version}"']
+    "docs/source/conf.py" = ["release = '{version}'"]

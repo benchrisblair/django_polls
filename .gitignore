@@ -1,0 +1,8 @@
+__pycache__/
+
+# Distribution / Packaging
+dist/
+*.egg-info/
+
+# Environments
+venv/
